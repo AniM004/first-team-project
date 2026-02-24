@@ -1,5 +1,6 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
+@use "../components/buttons";
 
 .site-header {
   width: 100%;
@@ -8,25 +9,39 @@
   padding: 0 2.4rem;
   font-size: 1.6rem;
 
+  @media (min-width: variables.$breakpoint-tablet) {
+    margin-top: 5rem;
+    height: 8.6rem;
+  }
+
   .site-header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100%;
+
+    @media (min-width: variables.$breakpoint-tablet) {
+      padding: 1.6rem 2.4rem;
+      border-radius: 1.2rem;
+      background-color: variables.$color-header-bg;
+    }
   }
 
   &.dark {
     .logo {
       background-image: url("../assets/icons/logo-mobile-dark.svg");
     }
-    .theme-toggle {
-      background-image: url("../assets/icons/sun.svg");
-    }
-    .burger-menu {
-      background-image: url("../assets/icons/burger-dark.svg");
-      &.display {
-        background-image: url("../assets/icons/close-button-dark.svg");
+
+    .header-actions {
+      .theme-toggle {
+        background-image: url("../assets/icons/sun.svg");
+      }
+      .burger-menu {
+        background-image: url("../assets/icons/burger-dark.svg");
+        &.display {
+          background-image: url("../assets/icons/close-button-dark.svg");
+        }
       }
     }
   }
@@ -45,29 +60,90 @@
     width: 7.7rem;
     height: 2.4rem;
     background-image: url("../assets/icons/logo-mobile-light.svg");
-  }
-
-  .theme-toggle {
-    width: 2.4rem;
-    height: 2.4rem;
-    background-image: url("../assets/icons/moon.svg");
-    &.display {
+    @media (min-width: variables.$breakpoint-tablet) {
       display: none;
     }
   }
 
-  .burger-menu {
-    width: 2.4rem;
-    height: 2.4rem;
-    background-image: url("../assets/icons/burger-light.svg");
-    &.display {
-      background-image: url("../assets/icons/close-button-light.svg");
+  .logo-desktop {
+    font-size: 2rem;
+    font-weight: 500;
+    display: none;
+    color: variables.$color-btn-text-light;
+    @media (min-width: variables.$breakpoint-tablet) {
+      display: block;
+    }
+  }
+  .desktop-nav {
+    display: none;
+    @media (min-width: variables.$breakpoint-tablet) {
+      display: block;
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 3.5rem;
+        li {
+          a {
+            color: variables.$color-btn-text-light;
+          }
+        }
+      }
     }
   }
 
   .header-actions {
     display: flex;
+    align-items: center;
     gap: 3.7rem;
+
+    .theme-toggle {
+      width: 2.4rem;
+      height: 2.4rem;
+      background-image: url("../assets/icons/moon.svg");
+      &.display {
+        display: none;
+      }
+      @media (min-width: variables.$breakpoint-tablet) {
+        filter: brightness(0) invert(1);
+        margin-right: 2.2rem;
+      }
+    }
+
+    .burger-menu {
+      width: 2.4rem;
+      height: 2.4rem;
+      background-image: url("../assets/icons/burger-light.svg");
+      &.display {
+        background-image: url("../assets/icons/close-button-light.svg");
+      }
+    }
+
+    .sign-in {
+      display: none;
+      color: variables.$color-btn-text-light;
+    }
+
+    .free-trial {
+      @include mixins.btn-theme(variables.$color-bg-light);
+      @extend %btn;
+      display: none;
+    }
+
+    @media (min-width: variables.$breakpoint-tablet) {
+      gap: 2.8rem;
+
+      .sign-in {
+        display: block;
+      }
+
+      .free-trial {
+        display: block;
+      }
+
+      .burger-menu {
+        display: none;
+      }
+    }
   }
 
   .mobile-nav {
