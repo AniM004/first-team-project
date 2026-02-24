@@ -16,6 +16,11 @@ html,
 body {
   font-size: variables.$font-size-base;
   font-family: variables.$font-family-base;
+  -webkit-tap-highlight-color: transparent;
+  webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 input,
@@ -29,4 +34,9 @@ select {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
 }

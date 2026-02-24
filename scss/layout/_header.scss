@@ -1,25 +1,108 @@
 @use "../abstracts/variables";
+@use "../abstracts/mixins";
 
 .site-header {
-  padding: 0 2.4rem;
-  max-width: 124rem;
   width: 100%;
+  max-width: 124rem;
   height: 6.4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 0 2.4rem;
+  font-size: 1.6rem;
 
-  .logo,
-  .theme-toggle {
+  .site-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.dark {
+    .logo {
+      background-image: url("../assets/icons/logo-mobile-dark.svg");
+    }
+    .theme-toggle {
+      background-image: url("../assets/icons/sun.svg");
+    }
+    .burger-menu {
+      background-image: url("../assets/icons/burger-dark.svg");
+      &.display {
+        background-image: url("../assets/icons/close-button-dark.svg");
+      }
+    }
+  }
+
+  * {
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    border: none;
+    background-color: transparent;
+  }
+
+  .logo {
+    width: 7.7rem;
     height: 2.4rem;
+    background-image: url("../assets/icons/logo-mobile-light.svg");
+  }
+
+  .theme-toggle {
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url("../assets/icons/moon.svg");
+    &.display {
+      display: none;
+    }
   }
 
   .burger-menu {
-    width: 2.2rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url("../assets/icons/burger-light.svg");
+    &.display {
+      background-image: url("../assets/icons/close-button-light.svg");
+    }
   }
 
   .header-actions {
     display: flex;
     gap: 3.7rem;
+  }
+
+  .mobile-nav {
+    display: none;
+    padding-top: 6.5rem;
+    height: 100vh;
+    @include mixins.main-theme(variables.$color-bg-light);
+    ul {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 0.5rem;
+      li {
+        padding: 1.5rem 4.3rem;
+        border-radius: 0.8rem;
+        &:hover {
+          @include mixins.main-theme(variables.$color-btn-bg-light);
+        }
+      }
+    }
+    &.display {
+      display: block;
+    }
+  }
+
+  &.dark {
+    .mobile-nav {
+      @include mixins.main-theme(variables.$color-bg-dark);
+      ul {
+        li {
+          &:hover {
+            @include mixins.main-theme(variables.$color-btn-bg-dark);
+          }
+        }
+      }
+    }
   }
 }

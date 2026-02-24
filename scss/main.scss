@@ -16,5 +16,8 @@ body {
   &.dark {
     @include mixins.main-theme(variables.$color-bg-dark);
   }
-}
 
+  * {
+    transition: all 0.3s ease-in-out;
+  }
+}
