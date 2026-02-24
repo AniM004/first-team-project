@@ -1,0 +1,17 @@
+@use 'variables' as *;
+@use 'base';
+
+button,
+.btn {
+  @include base.button-base;
+  background: $color-btn-bg-light;
+  color: $color-btn-text-light;
+}
+
+[data-theme="dark"] button,
+[data-theme="dark"] .btn,
+.dark button,
+.dark .btn {
+  background: $color-btn-bg-dark;
+  color: $color-btn-text-dark;
+}
