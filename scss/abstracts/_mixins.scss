@@ -1,0 +1,12 @@
+@use "./functions";
+
+@mixin main-theme($bg-color) {
+  background-color: $bg-color;
+  color: functions.set-main-text-color($bg-color);
+}
+
+@mixin btn-theme($bg-color) {
+  background-color: $bg-color;
+  color: functions.set-btn-text-color($bg-color);
+}
+

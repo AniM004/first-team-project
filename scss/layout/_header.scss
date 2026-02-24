@@ -1,0 +1,25 @@
+@use "../abstracts/variables";
+
+.site-header {
+  padding: 0 2.4rem;
+  max-width: 124rem;
+  width: 100%;
+  height: 6.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo,
+  .theme-toggle {
+    height: 2.4rem;
+  }
+
+  .burger-menu {
+    width: 2.2rem;
+  }
+
+  .header-actions {
+    display: flex;
+    gap: 3.7rem;
+  }
+}

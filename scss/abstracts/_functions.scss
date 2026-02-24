@@ -1,0 +1,19 @@
+@use "./variables";
+
+/* Main theme */
+@function set-main-text-color($bg-color) {
+  @if (lightness($bg-color) > 50%) {
+    @return variables.$color-text-light;
+  } @else {
+    @return variables.$color-text-dark;
+  }
+}
+
+/* Button theme */
+@function set-btn-text-color($bg-color) {
+  @if (lightness($bg-color) < 50%) {
+    @return variables.$color-btn-text-light;
+  } @else {
+    @return variables.$color-btn-text-dark;
+  }
+}
