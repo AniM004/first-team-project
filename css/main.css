@@ -85,7 +85,7 @@ ul {
     background-color: #052a44;
   }
 }
-.site-header.dark .logo {
+.site-header.dark .logo-mobile {
   background-image: url("../assets/icons/logo-mobile-dark.svg");
 }
 .site-header.dark .header-actions .theme-toggle {
@@ -106,13 +106,13 @@ ul {
   border: none;
   background-color: transparent;
 }
-.site-header .logo {
+.site-header .logo-mobile {
   width: 7.7rem;
   height: 2.4rem;
   background-image: url("../assets/icons/logo-mobile-light.svg");
 }
 @media (min-width: 64rem) {
-  .site-header .logo {
+  .site-header .logo-mobile {
     display: none;
   }
 }

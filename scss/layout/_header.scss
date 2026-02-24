@@ -29,7 +29,7 @@
   }
 
   &.dark {
-    .logo {
+    .logo-mobile {
       background-image: url("../assets/icons/logo-mobile-dark.svg");
     }
 
@@ -56,7 +56,7 @@
     background-color: transparent;
   }
 
-  .logo {
+  .logo-mobile {
     width: 7.7rem;
     height: 2.4rem;
     background-image: url("../assets/icons/logo-mobile-light.svg");
