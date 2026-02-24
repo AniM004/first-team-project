@@ -16,8 +16,8 @@ html,
 body {
   font-size: variables.$font-size-base;
   font-family: variables.$font-family-base;
+  font-weight: 400;
   -webkit-tap-highlight-color: transparent;
-  webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;

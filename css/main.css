@@ -15,8 +15,8 @@ html,
 body {
   font-size: 62.5%;
   font-family: "Poppins", system-ui, sans-serif;
+  font-weight: 400;
   -webkit-tap-highlight-color: transparent;
-  webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -151,6 +151,49 @@ ul {
   color: #000000;
 }
 
+.site-footer {
+  width: 100%;
+  max-width: 124rem;
+  padding: 2.4rem;
+  font-size: 1.6rem;
+  line-height: 3.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+.site-footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.site-footer .footer-container * {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-footer .footer-container .footer-logo {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.site-footer .footer-container .footer-socials .footer-socials-icons {
+  width: 13.3rem;
+  height: 3.3rem;
+  margin-top: 0.9rem;
+  background-image: url("../assets/icons/socials-light.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.site-footer.dark .footer-socials .footer-socials-icons {
+  background-image: url("../assets/icons/socials-dark.svg");
+}
+
+body.menu-open .site-footer {
+  display: none;
+}
+
 /* Body */
 body {
   display: flex;
@@ -162,6 +205,9 @@ body {
 body.dark {
   background-color: #1e2a39;
   color: #ffffff;
+}
+body.menu-open main {
+  display: none;
 }
 body * {
   transition: all 0.3s ease-in-out;
