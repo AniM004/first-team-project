@@ -147,6 +147,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 3.7rem;
+  position: relative;
 }
 .site-header .header-actions .theme-toggle {
   width: 2.4rem;
@@ -159,7 +160,8 @@ ul {
 @media (min-width: 64rem) {
   .site-header .header-actions .theme-toggle {
     filter: brightness(0) invert(1);
-    margin-right: 2.2rem;
+    position: absolute;
+    left: -5rem;
   }
 }
 .site-header .header-actions .burger-menu {

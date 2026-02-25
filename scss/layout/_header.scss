@@ -95,6 +95,7 @@
     display: flex;
     align-items: center;
     gap: 3.7rem;
+    position: relative;
 
     .theme-toggle {
       width: 2.4rem;
@@ -105,7 +106,8 @@
       }
       @media (min-width: variables.$breakpoint-tablet) {
         filter: brightness(0) invert(1);
-        margin-right: 2.2rem;
+        position: absolute;
+        left: -5rem;
       }
     }
 
