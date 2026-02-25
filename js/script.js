@@ -1,6 +1,6 @@
 document.querySelector('.theme-toggle').addEventListener('click', () => {
   document.body.classList.toggle('dark');
-  document.querySelector('.button').classList.toggle('dark');
+  document.querySelectorAll('.button').forEach(button => button.classList.toggle('dark'));
   document.querySelector('.site-header').classList.toggle('dark');
   document.querySelector('.site-footer').classList.toggle('dark');
 });
