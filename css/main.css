@@ -40,7 +40,7 @@ ul {
   list-style: none;
 }
 
-.site-header .header-actions .free-trial, .button {
+.site-header .header-actions .free-trial, .button-static, .button {
   padding: 1.5rem 4.3rem;
   border-radius: 0.8rem;
   cursor: pointer;
@@ -50,12 +50,17 @@ ul {
 }
 
 .button {
-  background-color: #000000;
+  background-color: #052A44;
   color: #ffffff;
 }
 .button.dark {
   background-color: #ffffff;
   color: #000000;
+}
+
+.button-static {
+  background-color: #052A44;
+  color: #ffffff;
 }
 
 .site-header {
@@ -213,7 +218,7 @@ ul {
   border-radius: 0.8rem;
 }
 .site-header .mobile-nav ul li:hover {
-  background-color: #000000;
+  background-color: #052A44;
   color: #ffffff;
 }
 .site-header .mobile-nav.display {

@@ -18,3 +18,8 @@
     @include mixins.btn-theme(variables.$color-btn-bg-dark);
   }
 }
+
+.button-static {
+  @extend %btn;
+  @include mixins.btn-theme(variables.$color-btn-bg-light);
+}
