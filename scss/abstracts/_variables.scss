@@ -1,17 +1,19 @@
 // Breakpoints (320px mobile, 1440px desktop)
 $breakpoint-mobile: 32rem;
 $breakpoint-tablet: 64rem;
-$breakpoint-desktop: 144rem;
+$breakpoint-desktop: 122.4rem;
 
 // Typography
-$font-family-base: 'Poppins', system-ui, sans-serif;
+$font-family-base: "Poppins", system-ui, sans-serif;
 $font-size-base: 62.5%;
+$mobile-font-size: 1.6rem;
 
-// Light theme 
+// Light theme
 $color-bg-light: #ffffff;
 $color-text-light: #000000;
-$color-btn-bg-light: #052A44;
+$color-btn-bg-light: #052a44;
 $color-btn-text-light: #ffffff;
+$title-color: #183b56;
 
 // Dark theme
 $color-bg-dark: #1e2a39;

@@ -1,4 +1,5 @@
 @use "./functions";
+@use "./variables";
 
 @mixin main-theme($bg-color) {
   background-color: $bg-color;
@@ -10,3 +11,43 @@
   color: functions.set-btn-text-color($bg-color);
 }
 
+// flexblox
+@mixin flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// ver gavakete ferbistbis
+@mixin title-color($theme-color) {
+  background-color: $theme-color;
+  color: functions.set-title-color($theme-color);
+}
+
+// hero-section-illustrations-info-box(without flex)
+// mobile
+@mixin small-box() {
+  background-color: variables.$color-bg-light;
+  width: 6.1rem;
+  height: 4.5rem;
+  border-radius: 0.5rem;
+
+  box-shadow: 0.74px 1.48px 14.03px 0px #00000014;
+
+  flex-direction: column;
+  gap: 0.3rem;
+
+  position: relative;
+  left: 50%;
+}
+
+// desktop
+@mixin small-box-desktop() {
+  width: 6.1rem;
+  height: 4.5rem;
+  border-radius: 2rem;
+
+  box-shadow: 1.72px 3.43px 32.62px 0px #00000014;
+
+  gap: 1.2rem;
+}

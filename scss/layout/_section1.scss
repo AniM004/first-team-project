@@ -4,3 +4,243 @@
 @use "../base/reset";
 @use "../components/buttons";
 
+.hero-section {
+  // margin: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-wrapper {
+  @include mixins.flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-bottom: 2.4rem;
+
+  p {
+    display: flex;
+    text-align: center;
+    font-size: variables.$mobile-font-size;
+  }
+}
+
+.title {
+  // background-color: blue;
+  display: flex;
+  font-size: 3.2rem;
+  // color: #183b56;
+  // color: set-title-color(variables.$color-bg-light);
+  // @include mixins.title-color(variables.$color-bg-light);
+  letter-spacing: 0.02rem;
+}
+
+.hero-button-wrapper {
+  @include mixins.flex;
+  margin-bottom: 2.5rem;
+  gap: 0.8rem;
+
+  .hero-blue-button {
+    @extend %btn-mobile;
+  }
+
+  .hero-white-button {
+    @include mixins.flex;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+
+.play-circle {
+  @include mixins.flex;
+
+  width: 3.6rem;
+  height: 3.6rem;
+  background-color: #ffffff;
+  border-radius: 10rem;
+  box-shadow: 2px -2px 38px 0px #00000014;
+
+  .triangle {
+    width: 0;
+    height: 0;
+    border-top: 0.85rem solid transparent;
+    border-bottom: 0.85rem solid transparent;
+    border-left: 1.5rem solid #052a44;
+    margin-left: 0.25rem;
+  }
+}
+
+.elipse-wrapper {
+  display: none;
+  height: 5.2rem;
+  width: 28.1rem;
+  position: relative;
+
+  span {
+    font-size: 1.309rem;
+    line-height: 1.963rem;
+    font-weight: 500;
+
+    // padding-left: 64px;
+    text-align: center;
+  }
+}
+.img-wrapper {
+  // position: relative;
+  // width: 11.67rem;
+  .img-1 {
+    position: absolute;
+    left: -6.4rem;
+    top: 0rem;
+  }
+  .img-2 {
+    position: absolute;
+
+    left: -3.2rem;
+    top: 0rem;
+  }
+  .img-3 {
+    position: absolute;
+    left: 0rem;
+    top: 0rem;
+  }
+}
+
+// hero-illustrations
+
+.hero-illustrations {
+  display: flex;
+  position: relative;
+  right: 1rem;
+
+  &-background {
+    // position: relative;
+    // right: 1rem;
+
+    // display: flex;
+    // justify-content: end;
+    width: 21.8rem;
+    height: 17.5rem;
+    background-color: #e8db84;
+    border-radius: 0.86rem;
+  }
+  img {
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    // top: 0;
+  }
+}
+
+.hero-illustrations-info {
+  @include mixins.flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+
+  // justify-content: space-evenly;
+  // height: 17.5rem;
+
+  &-1 {
+    @include mixins.small-box;
+    @include mixins.flex;
+
+    .blue-circle {
+      @include mixins.flex;
+      @extend %profile;
+      background-color: variables.$color-btn-bg-light;
+      color: #ffffff;
+    }
+  }
+  &-2 {
+    @include mixins.small-box;
+    @include mixins.flex;
+  }
+  &-3 {
+    @include mixins.small-box;
+    @include mixins.flex;
+  }
+
+  .info-title {
+    font-size: 0.55rem;
+    font-weight: 700;
+  }
+
+  .info-description {
+    font-size: 0.45rem;
+    font-weight: 350;
+  }
+}
+
+.user-profile {
+  &-1 {
+    @extend %profile;
+    position: absolute;
+    left: 30%;
+    top: 70%;
+  }
+  &-2 {
+    @extend %profile;
+    position: absolute;
+    left: 40%;
+    top: 70%;
+  }
+  &-3 {
+    @extend %profile;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+  }
+}
+
+.courses {
+  display: flex;
+  &-1 {
+    @extend %profile;
+    position: absolute;
+    left: 30%;
+    top: 70%;
+  }
+  &-2 {
+    @extend %profile;
+    position: absolute;
+    left: 40%;
+    top: 70%;
+  }
+  &-3 {
+    @extend %profile;
+    @extend %profile;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+  }
+}
+
+@media (min-width: 1240px) {
+  .hero-section {
+    display: flex;
+    flex-direction: row;
+
+    max-width: 124rem;
+    height: 53.8rem;
+    justify-content: space-between;
+    // margin: 0 auto;
+  }
+
+  .text-wrapper {
+    max-width: 57.9rem;
+    align-items: start;
+    p {
+      text-align: start;
+      font-size: 1.8rem;
+    }
+  }
+
+  .hero-illustrations {
+    max-width: 58.9rem;
+    // width: 58.8rem;
+  }
+
+  .elipse-wrapper {
+    @include mixins.flex;
+  }
+}

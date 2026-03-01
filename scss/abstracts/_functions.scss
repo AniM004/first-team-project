@@ -17,3 +17,13 @@
     @return variables.$color-btn-text-dark;
   }
 }
+
+
+@function set-title-color($theme-color) {
+  @if (lightness($theme-color)>50%){
+    @return #561818;
+  }
+  @else{
+    @return variables.$color-text-dark
+  }
+}
