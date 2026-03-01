@@ -1,90 +1,296 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareerPath-Mentoring-task</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CareerPath-Mentoring-task</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-
-<body>
-  <header class="site-header">
-    <div class="site-header-container">
-      <a href="#" class="logo-mobile"></a>
-      <a href="#" class="logo-desktop">CareerPathNow</a>
-      <nav class="desktop-nav">
+  <body>
+    <header class="site-header">
+      <div class="site-header-container">
+        <a href="#" class="logo-mobile"></a>
+        <a href="#" class="logo-desktop">CareerPathNow</a>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About US</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button type="button" class="theme-toggle"></button>
+          <button type="button" class="burger-menu"></button>
+          <button type="button" class="sign-in">Sign In</button>
+          <button type="button" class="free-trial">Free Trial</button>
+        </div>
+      </div>
+      <nav class="mobile-nav">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About US</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Contact</a></li>
+          <li><a href="#">Sign In</a></li>
+          <li><a href="#">Free Trial</a></li>
         </ul>
       </nav>
-      <div class="header-actions">
-        <button type="button" class="theme-toggle"></button>
-        <button type="button" class="burger-menu"></button>
-        <button type="button" class="sign-in">Sign In</button>
-        <button type="button" class="free-trial">Free Trial</button>
+    </header>
+
+    <main class="main-content">
+      <section class="hero-section container">
+        <div class="text-wrapper">
+          <div class="title">
+            <span class="title-highlight">Career</span>
+            <span>PathNow</span>
+          </div>
+
+          <p>
+            CareerPathNow is a renowned career counselling organization that
+            helps individuals make informed decisions about their career paths.
+          </p>
+          <div class="hero-button-wrapper">
+            <input type="button" value="Get Started" class="hero-blue-button" />
+
+            <div class="hero-white-button">
+              <div class="play-circle">
+                <div class="triangle"></div>
+              </div>
+              <span>Learn More</span>
+            </div>
+          </div>
+
+          <div class="elipse-wrapper">
+            <div class="img-wrapper">
+              <img
+                src="./assets/images/man-with-beard.svg"
+                alt="satisfied student"
+                class="img-1"
+              />
+              <img
+                src="./assets/images/boy.svg"
+                alt="satisfied student"
+                class="img-2"
+              />
+              <img
+                src="./assets/images/third-man.svg"
+                alt="satisfied student"
+                class="img-3"
+              />
+            </div>
+
+            <span>10K+ satisfied students</span>
+          </div>
+        </div>
+
+        <div class="hero-illustrations">
+          <div class="hero-illustrations-info">
+            <div class="hero-illustrations-info-1">
+              <p class="info-title">Our Happy Users</p>
+              <p class="info-description">200+ Online User</p>
+              <div class="blue-circle">+</div>
+            </div>
+            <div class="hero-illustrations-info-2">
+              <p class="info-title">27K</p>
+              <p class="info-description">Member Joined</p>
+              <div class="user-profile">
+                <img
+                  src="./assets/images/levani.png"
+                  alt=""
+                  class="user-profile-1"
+                />
+                <img
+                  src="./assets/images/ani.jpeg"
+                  alt=""
+                  class="user-profile-2"
+                />
+                <img
+                  src="./assets/images/sali.jpeg"
+                  alt=""
+                  class="user-profile-3"
+                />
+              </div>
+            </div>
+            <div class="hero-illustrations-info-3">
+              <p class="info-title">Unlock Access</p>
+              <p class="info-description">1000+ courses</p>
+              <div class="courses">
+                <img src="./assets/images/cad.png" alt="" class="courses-1" />
+                <img src="./assets/images/java.png" alt="" class="courses-2" />
+                <img
+                  src="./assets/images/photoshop.png"
+                  alt=""
+                  class="courses-3"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="illustration-wrapper">
+            <div class="hero-illustrations-background">
+              <!-- <img src="./assets/images/hero-girl.svg" alt="student girl" /> -->
+            </div>
+            <img src="./assets/images/hero-girl.svg" alt="student girl" />
+          </div>
+        </div>
+      </section>
+
+      <section class="about-us container">
+        <div class="about-us-text">
+          <p class="about-us-title">About US</p>
+          <p class="about-us-description">
+            Skilline is one powerful online software suite that combines all the
+            tools needed to run a successful school or office.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <img
+              src="./assets/icons/card-logo.svg"
+              alt="card icon"
+              class="card-icon-logo"
+            />
+          </div>
+          <div class="card-title"><p>Mission</p></div>
+          <div class="card-text">
+            <p>
+              help learners qualify for roles in fields such as cybersecurity,
+              UX, data analytics, AI, and business.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="./assets/icons/card-icon.svg"
+            alt="card icon"
+            class="card-icon"
+          />
+          <div class="card-title"><p>Values</p></div>
+          <div class="card-text">
+            <p>
+              partners with accredited universities and leading companies to
+              offer courses, Specializations, and Professional Certificates.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="./assets/icons/card-icon.svg"
+            alt="card icon"
+            class="card-icon"
+          />
+          <div class="card-title"><p>Unique Selling Points</p></div>
+
+          <div class="card-text">
+            <p>
+              Tailored career solutions, industry-leading assessments, and
+              expert counseling.
+            </p>
+          </div>
+        </div>
+
+        <input type="button" value="Get Started" class="about-us-button" />
+      </section>
+
+      <section></section>
+
+      <section></section>
+
+      <section class="reviews container">
+        <div class="reviews-wrapper">
+          <div class="reviews-text-wrapper">
+            <p class="reviews-title">Reviews from our customers</p>
+            <p class="reviews-description">
+              CareerPathNow has got more than 100k positive ratings from our
+              users around the world.
+            </p>
+          </div>
+          <div class="reviews-card">
+            <div class="reviews-card-head-wrapper">
+              <img src="./assets/images/ani.jpeg" alt="" />
+              <div class="reviews-card-head">
+                <p class="reviews-card-name">Ani Maisuradze</p>
+                <p class="reviews-card-job">Front-end Developer</p>
+              </div>
+            </div>
+            <p class="reviews-card-text">
+              we build the user-facing, interactive parts of websites and
+              applications using HTML, CSS, and JavaScript.
+            </p>
+          </div>
+
+          <div class="reviews-card">
+            <div class="reviews-card-head-wrapper">
+              <img src="./assets/images/sali.jpeg" alt="" />
+
+              <div class="reviews-card-head">
+                <p class="reviews-card-name">Sali Janjalashvili</p>
+                <p class="reviews-card-job">3D Vizualizer</p>
+              </div>
+            </div>
+            <p class="reviews-card-text">
+              we bring building designs to life by transforming 2D plans into
+              photorealistic images, animations, and interactive, immersive
+              virtual tours
+            </p>
+          </div>
+          <div class="reviews-card">
+            <div class="reviews-card-head-wrapper">
+              <img src="./assets/images/levani.png" alt="" />
+
+              <div class="reviews-card-head">
+                <p class="reviews-card-name">Levan Mgebrishvili</p>
+                <p class="reviews-card-job">Freelance Designer</p>
+              </div>
+            </div>
+
+            <p class="reviews-card-text">
+              We test and compare the best project management software for
+              collaborating with a team, hitting deadlines.
+            </p>
+          </div>
+        </div>
+
+        <input type="button" value="See More" class="reviews-btn" />
+      </section>
+
+      <section></section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-general">
+          <p class="footer-logo">CareerPathNow</p>
+          <p>Address of the organization</p>
+          <p>+01 (787)-8765456</p>
+        </div>
+        <div class="footer-socials">
+          <p>Find Us On Social Media:</p>
+          <div class="footer-socials-icons"></div>
+        </div>
+        <div class="footer-email">
+          <p>We’re Always Happy To Help</p>
+          <p>CareerPathNow@gmail.com</p>
+        </div>
       </div>
-    </div>
-    <nav class="mobile-nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About US</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Sign In</a></li>
-        <li><a href="#">Free Trial</a></li>
-      </ul>
-    </nav>
-  </header>
+      <div class="footer-copyright">Copyright © 2024 CareerPathNow</div>
+    </footer>
+  </body>
 
-  <main class="main-content">
-    <section>
-    </section>
-
-    <section>
-    </section>
-
-    <section>
-    </section>
-
-    <section>
-    </section>
-
-    <section>
-    </section>
-
-    <section>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-general">
-        <p class="footer-logo">CareerPathNow</p>
-        <p>Address of the organization</p>
-        <p>+01 (787)-8765456</p>
-      </div>
-      <div class="footer-socials">
-        <p>Find Us On Social Media:</p>
-        <div class="footer-socials-icons"></div>
-      </div>
-      <div class="footer-email">
-        <p>We’re Always Happy To Help</p>
-        <p>CareerPathNow@gmail.com</p>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      Copyright © 2024 CareerPathNow
-    </div>
-  </footer>
-</body>
-
-<script src="js/script.js"></script>
-
+  <script src="js/script.js"></script>
 </html>

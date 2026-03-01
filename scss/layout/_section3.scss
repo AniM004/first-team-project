@@ -4,3 +4,80 @@
 @use "../base/reset";
 @use "../components/buttons";
 
+.reviews {
+  @include mixins.flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2.4rem;
+  }
+
+  &-text-wrapper {
+    @include mixins.flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.6rem;
+  }
+
+  &-title {
+    @extend %card-title-mbl;
+  }
+
+  &-description {
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  &-btn{
+    @extend %btn-mobile;
+  }
+}
+
+.reviews-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 1.31px 2.62px 18.34px 0px #00000014;
+  padding: 2.1rem;
+
+  p {
+    text-align: center;
+  }
+
+  &-head {
+    @include mixins.flex;
+    flex-direction: column;
+  }
+
+  &-head-wrapper {
+    @include mixins.flex;
+    gap: 1.5rem;
+
+    img {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 100%;
+    }
+  }
+
+  &-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  &-job {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  &-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
